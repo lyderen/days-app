@@ -5,11 +5,12 @@
   "author": "A M",
   "license": "MIT",
   "scripts": {
-    "start": "node server/server.js",
     "serve": "live-server public/",
     "build": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "dependencies": {
     "axios": "0.18.0",
